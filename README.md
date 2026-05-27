@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Nang Rotha · Full-Stack & Desktop Dev | Professional GitHub UI</title>
-    <!-- Google Fonts + Font Awesome 6 -->
+    <title>Nang Rotha · Full-Stack & Desktop Architect | Professional UI</title>
+    <!-- Google Fonts (Inter) + Font Awesome 6 Free -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -15,8 +15,8 @@
         }
 
         body {
-            background: radial-gradient(circle at 10% 30%, #eef2ff, #e0e8f0);
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #eef2f9 0%, #d9e2ef 100%);
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -24,31 +24,30 @@
             padding: 2rem;
         }
 
-        /* MAIN CARD — premium glassmorphic card */
-        .profile-card {
+        /* MAIN CARD — Modern glassmorphism + subtle depth */
+        .profile-container {
             max-width: 1280px;
             width: 100%;
             background: #ffffff;
             border-radius: 2.5rem;
             overflow: hidden;
-            box-shadow: 0 30px 55px -20px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.02);
-            transition: transform 0.25s ease, box-shadow 0.3s;
+            box-shadow: 0 30px 50px -20px rgba(0, 0, 0, 0.25), 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s;
         }
 
-        .profile-card:hover {
+        .profile-container:hover {
             transform: translateY(-3px);
-            box-shadow: 0 38px 65px -20px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 40px 60px -20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Header: dark tech gradient */
-        .profile-header {
-            background: linear-gradient(125deg, #0B1120 0%, #14212e 100%);
-            padding: 2rem 2.5rem 1.8rem 2.5rem;
+        /* HEADER SECTION: avatar + headline + contact */
+        .hero-header {
+            background: linear-gradient(110deg, #0c1427 0%, #1a2741 100%);
+            padding: 2rem 2.8rem;
             color: white;
-            position: relative;
         }
 
-        .header-flex {
+        .hero-flex {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -56,79 +55,80 @@
             gap: 1.5rem;
         }
 
-        .identity {
+        .identity-area {
             display: flex;
             align-items: center;
             gap: 1.5rem;
             flex-wrap: wrap;
         }
 
-        .avatar-frame {
-            background: linear-gradient(135deg, #3b82f6, #a855f7);
+        .avatar-ring {
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            padding: 3px;
-            box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.4);
+            padding: 5px;
+            backdrop-filter: blur(4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
-        .avatar {
+        .avatar-icon {
             width: 100px;
             height: 100px;
-            background: #0a0f1f;
+            background: linear-gradient(145deg, #2b3b6e, #121d36);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            font-weight: 600;
+            font-size: 3.2rem;
+            font-weight: 700;
             color: white;
+            border: 2px solid rgba(255,255,240,0.7);
             background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="52px" height="52px"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>');
             background-repeat: no-repeat;
             background-position: center 60%;
-            background-size: 52px;
-            background-color: #111827;
+            background-size: 50px;
         }
 
-        .name-title h1 {
+        .name-badge h1 {
             font-size: 2.4rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            background: linear-gradient(to right, #FFFFFF, #b9e0ff);
-            background-clip: text;
+            background: linear-gradient(to right, #FFFFFF, #B9D0FF);
             -webkit-background-clip: text;
+            background-clip: text;
             color: transparent;
         }
 
-        .badge-group {
+        .role-tags {
             display: flex;
-            gap: 0.7rem;
             flex-wrap: wrap;
+            gap: 0.7rem;
             margin-top: 0.5rem;
         }
 
-        .badge {
+        .pill {
             background: rgba(255,255,255,0.12);
-            backdrop-filter: blur(6px);
-            border-radius: 60px;
+            backdrop-filter: blur(5px);
+            border-radius: 40px;
             padding: 0.3rem 1rem;
             font-size: 0.75rem;
             font-weight: 500;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            border: 0.5px solid rgba(255,255,255,0.2);
+            border: 0.5px solid rgba(255,255,255,0.25);
         }
 
-        .contact-links {
+        .contact-strip {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
-            background: rgba(0,0,0,0.3);
-            padding: 0.6rem 1.3rem;
-            border-radius: 80px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 60px;
         }
 
-        .contact-links a {
-            color: #eef2ff;
+        .contact-strip a {
+            color: #f0f3ff;
             text-decoration: none;
             font-size: 0.85rem;
             font-weight: 500;
@@ -136,34 +136,34 @@
             align-items: center;
             gap: 8px;
             transition: all 0.2s;
-            padding: 0.25rem 0.6rem;
+            padding: 0.2rem 0.6rem;
             border-radius: 40px;
         }
 
-        .contact-links a:hover {
+        .contact-strip a:hover {
             background: rgba(255,255,255,0.2);
-            color: white;
+            transform: scale(1.02);
         }
 
         /* stats row */
-        .stats-row {
+        .insight-stats {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            background: rgba(0, 0, 0, 0.25);
+            gap: 1rem;
             margin-top: 2rem;
+            background: rgba(0,0,0,0.2);
             padding: 0.8rem 1.2rem;
             border-radius: 2rem;
-            gap: 1rem;
         }
 
-        .stat-item {
+        .stat-block {
             display: flex;
             align-items: center;
             gap: 12px;
-            background: rgba(255,255,255,0.06);
-            padding: 0.45rem 1.2rem;
-            border-radius: 40px;
+            background: rgba(255,255,255,0.05);
+            padding: 0.4rem 1.2rem;
+            border-radius: 2rem;
         }
 
         .stat-number {
@@ -171,320 +171,329 @@
             font-size: 1.3rem;
         }
 
-        /* main body */
+        /* MAIN BODY */
         .profile-body {
             padding: 2rem 2.5rem;
             background: #ffffff;
         }
 
+        /* two column layout (skill heavy) */
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2.2rem;
         }
 
-        .skill-category {
-            background: #fafcff;
-            border-radius: 1.6rem;
-            padding: 1.2rem 1.2rem 1.4rem;
-            border: 1px solid #eef2f8;
-            transition: all 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        @media (max-width: 850px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .hero-header {
+                padding: 1.5rem;
+            }
+            .profile-body {
+                padding: 1.5rem;
+            }
         }
 
-        .skill-category:hover {
-            border-color: #cbdde9;
-            background: white;
-            box-shadow: 0 12px 20px -14px rgba(0,0,0,0.1);
+        .section-card {
+            margin-bottom: 2rem;
         }
 
-        .category-title {
-            font-weight: 700;
-            font-size: 1.2rem;
+        .section-title {
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #0f1a2e;
             margin-bottom: 1rem;
-            border-left: 4px solid #2c6e9e;
+            border-left: 4px solid #2c7a5e;
             padding-left: 0.8rem;
-            color: #0f172a;
         }
 
-        .tech-pills {
+        .tech-cloud {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
             margin-top: 6px;
         }
 
-        .tech-pill {
+        .skill-tag {
             background: #eef2ff;
-            padding: 0.4rem 1rem;
-            border-radius: 36px;
+            padding: 0.45rem 1rem;
+            border-radius: 40px;
             font-size: 0.8rem;
             font-weight: 500;
-            color: #1e293b;
+            color: #1a2c3e;
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            transition: 0.15s;
+            transition: all 0.2s;
         }
 
-        .tech-pill i {
-            font-size: 0.85rem;
-            color: #2c6e9e;
+        .skill-tag i {
+            font-size: 0.9rem;
+            color: #2c6e5c;
         }
 
-        .tech-pill:hover {
-            background: #e2eafc;
+        .skill-tag:hover {
+            background: #e0e8fc;
             transform: translateY(-2px);
         }
 
-        .section-break {
-            margin: 2rem 0 1.2rem;
+        .subgroup {
+            margin: 1rem 0 0.5rem 0;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #2c3e66;
+            letter-spacing: -0.2px;
         }
 
-        .section-title-main {
-            font-size: 1.4rem;
+        .project-entry {
+            background: #f9fbfe;
+            border-radius: 1.2rem;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+            border: 1px solid #eef2f8;
+            transition: all 0.2s;
+        }
+
+        .project-entry:hover {
+            background: #ffffff;
+            border-color: #cddfe7;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.03);
+        }
+
+        .project-title {
             font-weight: 700;
+            font-size: 1rem;
             display: flex;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 1.2rem;
-            color: #0c4e6e;
+            gap: 8px;
         }
 
-        .project-highlight {
+        .project-desc {
+            font-size: 0.85rem;
+            color: #2d3a4b;
+            margin: 6px 0 8px 0;
+            line-height: 1.4;
+        }
+
+        .tech-used {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.2rem;
-            margin-top: 0.8rem;
+            gap: 8px;
+            margin-top: 8px;
         }
 
-        .mini-project {
-            background: #f8fafc;
-            border-radius: 1.3rem;
-            padding: 0.8rem 1.2rem;
-            flex: 1;
-            min-width: 180px;
-            border: 1px solid #e9edf2;
-        }
-
-        .footer-note {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #5b6e8c;
-            border-top: 1px solid #eef2ff;
-            padding-top: 1.2rem;
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
+        .mini-badge {
+            background: #e6edf6;
+            border-radius: 20px;
+            padding: 0.2rem 0.7rem;
+            font-size: 0.7rem;
+            font-weight: 500;
         }
 
         .github-metrics {
-            background: linear-gradient(115deg, #f1f5fe, #ffffff);
-            border-radius: 1.2rem;
-            padding: 1rem 1.2rem;
-            margin: 1.5rem 0 0.5rem;
+            background: #f1f5f9;
+            border-radius: 1.5rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .fun-footer {
+            margin-top: 1.5rem;
+            border-top: 1px solid #e9edf2;
+            padding-top: 1.2rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-items: center;
-        }
-
-        @media (max-width: 780px) {
-            .profile-header, .profile-body {
-                padding: 1.5rem;
-            }
-            .header-flex {
-                flex-direction: column;
-                align-items: start;
-            }
+            font-size: 0.75rem;
+            color: #4b6584;
         }
 
         .quote-block {
-            background: #fefce8;
-            padding: 0.7rem 1.2rem;
-            border-radius: 1.2rem;
+            background: #fef8e7;
+            border-radius: 1rem;
+            padding: 0.6rem 1rem;
             font-size: 0.8rem;
-            color: #7c5c2c;
-            margin: 1rem 0;
-            font-style: italic;
+            color: #a1622c;
+            margin: 1rem 0 0.5rem 0;
         }
 
-        hr {
-            margin: 1rem 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(to right, #e2e8f0, transparent);
+        i {
+            margin-right: 2px;
         }
     </style>
 </head>
 <body>
-<div class="profile-card">
-    <!-- HEADER with avatar and contact -->
-    <div class="profile-header">
-        <div class="header-flex">
-            <div class="identity">
-                <div class="avatar-frame">
-                    <div class="avatar"></div>
+<div class="profile-container">
+    <!-- HERO SECTION with fullstack identity -->
+    <div class="hero-header">
+        <div class="hero-flex">
+            <div class="identity-area">
+                <div class="avatar-ring">
+                    <div class="avatar-icon"></div>
                 </div>
-                <div class="name-title">
+                <div class="name-badge">
                     <h1>Nang Rotha</h1>
-                    <div class="badge-group">
-                        <span class="badge"><i class="fas fa-layer-group"></i> Full-Stack Architect</span>
-                        <span class="badge"><i class="fas fa-desktop"></i> Desktop Dev (C#/C)</span>
-                        <span class="badge"><i class="fas fa-database"></i> DB Specialist</span>
+                    <div class="role-tags">
+                        <span class="pill"><i class="fas fa-layer-group"></i> Full-Stack Architect</span>
+                        <span class="pill"><i class="fas fa-desktop"></i> Desktop Engineer</span>
+                        <span class="pill"><i class="fas fa-cloud-upload-alt"></i> API Specialist</span>
+                        <span class="pill"><i class="fas fa-database"></i> DB Designer</span>
                     </div>
                 </div>
             </div>
-            <div class="contact-links">
+            <div class="contact-strip">
                 <a href="#"><i class="fab fa-github"></i> NangRotha</a>
-                <a href="#"><i class="fab fa-linkedin"></i> rotha-pro</a>
-                <a href="#"><i class="fas fa-envelope"></i> dev.roth@fullstack.com</a>
+                <a href="#"><i class="fab fa-linkedin"></i> rotha-dev</a>
+                <a href="#"><i class="fas fa-envelope"></i> rotha@fullstack.dev</a>
                 <a href="#"><i class="fab fa-dev"></i> portfolio</a>
             </div>
         </div>
-        <div class="stats-row">
-            <div class="stat-item"><i class="fas fa-code-branch"></i> <span class="stat-number">38+</span> <span>repos</span></div>
-            <div class="stat-item"><i class="fas fa-fire"></i> <span class="stat-number">2.1k</span> <span>commits '24</span></div>
-            <div class="stat-item"><i class="fas fa-crown"></i> <span class="stat-number">14</span> <span>OSS contribs</span></div>
-            <div class="stat-item"><i class="fas fa-star"></i> <span class="stat-number">560</span> <span>stars</span></div>
+        <!-- stats row: contributions / projects / experience -->
+        <div class="insight-stats">
+            <div class="stat-block"><i class="fas fa-code-branch"></i> <span class="stat-number">40+</span> <span>repos</span></div>
+            <div class="stat-block"><i class="fas fa-rocket"></i> <span class="stat-number">14</span> <span>production apps</span></div>
+            <div class="stat-block"><i class="fas fa-trophy"></i> <span class="stat-number">5+</span> <span>years exp</span></div>
+            <div class="stat-block"><i class="fas fa-globe"></i> <span class="stat-number">3</span> <span>continents</span></div>
         </div>
     </div>
 
-    <!-- BODY: Skills organized as full-stack + desktop, projects, etc -->
+    <!-- BODY: ALL SKILLS + PROJECTS + DESKTOP SHOWCASE -->
     <div class="profile-body">
-        <!-- intro -->
-        <div class="quote-block">
-            <i class="fas fa-quote-left" style="margin-right: 8px;"></i> Full-stack engineer with desktop foundations — crafting scalable web backends, modern frontends, and performant native tools.
-        </div>
-
-        <!-- SKILLS GRID: frontend, backend, database, desktop -->
         <div class="skills-grid">
-            <!-- Frontend -->
-            <div class="skill-category">
-                <div class="category-title"><i class="fab fa-react" style="color:#0c6e9e;"></i> Frontend Ecosystem</div>
-                <div class="tech-pills">
-                    <span class="tech-pill"><i class="fab fa-html5"></i> HTML5</span>
-                    <span class="tech-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
-                    <span class="tech-pill"><i class="fab fa-tailwind"></i> Tailwind CSS</span>
-                    <span class="tech-pill"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
-                    <span class="tech-pill"><i class="fab fa-react"></i> React.js + Vite</span>
-                    <span class="tech-pill"><i class="fas fa-code"></i> JSON / REST</span>
+            <!-- LEFT COLUMN: frontend + backend + database + desktop mastery -->
+            <div>
+                <!-- FRONTEND SKILLS -->
+                <div class="section-card">
+                    <div class="section-title"><i class="fas fa-code" style="color:#2c7a5e;"></i> Frontend Ecosystem</div>
+                    <div class="tech-cloud">
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-tag"><i class="fab fa-tailwind"></i> Tailwind CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
+                        <span class="skill-tag"><i class="fab fa-react"></i> React.js + Vite</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> JSON / REST</span>
+                    </div>
+                </div>
+
+                <!-- BACKEND SKILLS (multilingual) -->
+                <div class="section-card">
+                    <div class="section-title"><i class="fas fa-server"></i> Backend & APIs</div>
+                    <div class="tech-cloud">
+                        <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                        <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-bolt"></i> FastAPI</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java (Spring)</span>
+                    </div>
+                </div>
+
+                <!-- DATABASE expertise -->
+                <div class="section-card">
+                    <div class="section-title"><i class="fas fa-database"></i> Database Engineering</div>
+                    <div class="tech-cloud">
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> SQLite</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Prisma / ORM</span>
+                    </div>
+                </div>
+
+                <!-- DESKTOP & SYSTEMS (C#, C) -->
+                <div class="section-card">
+                    <div class="section-title"><i class="fas fa-desktop"></i> Desktop / Native</div>
+                    <div class="tech-cloud">
+                        <span class="skill-tag"><i class="fab fa-windows"></i> C# (.NET / WPF)</span>
+                        <span class="skill-tag"><i class="fas fa-microchip"></i> C Programming</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> WinForms / CLI</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> Low-level optimizations</span>
+                    </div>
+                    <div class="quote-block" style="margin-top: 12px;">
+                        <i class="fas fa-laptop-code"></i>  Desktop tools + performance-critical systems, embedded C & cross-platform GUIs.
+                    </div>
+                </div>
+
+                <!-- additional fullstack badge -->
+                <div class="github-metrics" style="background:#eef3fa;">
+                    <i class="fas fa-chart-simple"></i> <strong>Full-Stack DNA</strong> — seamless integration from UI to DB & desktop runtimes
+                    <div style="font-size:0.7rem; margin-top: 6px;">⚡ 12+ microservices | 6 desktop utilities | realtime dashboards</div>
                 </div>
             </div>
 
-            <!-- Backend & API -->
-            <div class="skill-category">
-                <div class="category-title"><i class="fas fa-server"></i> Backend & API</div>
-                <div class="tech-pills">
-                    <span class="tech-pill"><i class="fab fa-node-js"></i> Node.js</span>
-                    <span class="tech-pill"><i class="fab fa-python"></i> Python</span>
-                    <span class="tech-pill"><i class="fas fa-bolt"></i> FastAPI</span>
-                    <span class="tech-pill"><i class="fab fa-java"></i> Java (Spring Boot)</span>
-                    <span class="tech-pill"><i class="fas fa-cloud"></i> RESTful / GraphQL</span>
+            <!-- RIGHT COLUMN: featured projects, collab & github highlights -->
+            <div>
+                <!-- project showcase: fullstack + desktop -->
+                <div class="section-card">
+                    <div class="section-title"><i class="fas fa-rocket"></i> Signature projects</div>
+                    <div class="project-entry">
+                        <div class="project-title"><i class="fab fa-react"></i> <span>HR Fusion Suite</span> <span style="font-size:0.7rem;">(Fullstack + Desktop)</span></div>
+                        <div class="project-desc">React + Vite frontend, FastAPI backend + PostgreSQL. Desktop companion built with C# for offline sync & reporting.</div>
+                        <div class="tech-used"><span class="mini-badge">React/Vite</span><span class="mini-badge">FastAPI</span><span class="mini-badge">PostgreSQL</span><span class="mini-badge">C# WinForms</span></div>
+                    </div>
+                    <div class="project-entry">
+                        <div class="project-title"><i class="fas fa-charging-station"></i> <span>Inventory Nexus</span></div>
+                        <div class="project-desc">Node.js + Express backend, SQLite embedded DB, Tailwind dashboard + Java Spring admin panel, C scanner integration.</div>
+                        <div class="tech-used"><span class="mini-badge">Node.js</span><span class="mini-badge">SQLite</span><span class="mini-badge">Tailwind</span><span class="mini-badge">Java</span></div>
+                    </div>
+                    <div class="project-entry">
+                        <div class="project-title"><i class="fas fa-cloud-upload-alt"></i> <span>API Orchestrator (Python/FAST)</span></div>
+                        <div class="project-desc">High-performance async API gateway with JWT, rate limiting and MySQL sharding. Used by 3 fintech prototypes.</div>
+                        <div class="tech-used"><span class="mini-badge">FastAPI</span><span class="mini-badge">MySQL</span><span class="mini-badge">Docker</span><span class="mini-badge">Pydantic</span></div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Databases -->
-            <div class="skill-category">
-                <div class="category-title"><i class="fas fa-database"></i> Databases & Storage</div>
-                <div class="tech-pills">
-                    <span class="tech-pill"><i class="fas fa-database"></i> MySQL</span>
-                    <span class="tech-pill"><i class="fas fa-database"></i> SQLite</span>
-                    <span class="tech-pill"><i class="fas fa-database"></i> PostgreSQL</span>
-                    <span class="tech-pill"><i class="fas fa-chart-line"></i> Prisma / SQLAlchemy</span>
+                <!-- Current focus + collaboration -->
+                <div class="section-card">
+                    <div class="section-title"><i class="fas fa-handshake"></i> Open to collaborate</div>
+                    <div style="background: #f5f9ff; border-radius: 1.2rem; padding: 1rem;">
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 12px;">
+                            <span class="pill" style="background:#e2ecfe; color:#1f3b62;"><i class="fas fa-microchip"></i> 🔭 Building: Cross-platform dev toolkit (C + React)</span>
+                            <span class="pill" style="background:#e2ecfe; color:#1f3b62;"><i class="fas fa-brain"></i> 🌱 Learning: WebAssembly & Rust</span>
+                        </div>
+                        <p style="font-size: 0.85rem;">👯 Looking to collaborate on: fullstack open source, desktop utilities, database tooling.  
+                        💬 Ask me about: full-stack architecture, hybrid desktop/web apps, API design, or C# interop.</p>
+                        <div style="margin-top: 12px;"><i class="fas fa-map-marker-alt"></i> Remote / Phnom Penh · UTC+7</div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Desktop & Systems -->
-            <div class="skill-category">
-                <div class="category-title"><i class="fas fa-laptop-code"></i> Desktop & Native</div>
-                <div class="tech-pills">
-                    <span class="tech-pill"><i class="fab fa-windows"></i> C# (.NET / WinForms)</span>
-                    <span class="tech-pill"><i class="fas fa-code"></i> C Programming</span>
-                    <span class="tech-pill"><i class="fas fa-microchip"></i> Embedded logic</span>
-                    <span class="tech-pill"><i class="fas fa-window-maximize"></i> WPF / MAUI</span>
+                <!-- GitHub activity / contributions & fun fact -->
+                <div class="section-card">
+                    <div class="section-title"><i class="fab fa-github-alt"></i> GitHub pulse</div>
+                    <div class="github-metrics">
+                        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                            <span><i class="fas fa-code-pull-request"></i> 156 PRs merged</span>
+                            <span><i class="fas fa-star"></i> 780 stars across projects</span>
+                            <span><i class="fas fa-fire"></i> 38w streak</span>
+                        </div>
+                        <hr style="margin: 12px 0; border-color:#dfe7ef;">
+                        <div style="font-size: 0.75rem; text-align: left;">
+                            <i class="fas fa-chart-line"></i> Top languages: TypeScript, Python, C#, Java, C
+                        </div>
+                        <div class="quote-block" style="background:#eef2f5; margin-top: 12px;">
+                            <i class="fas fa-lightbulb"></i> ⚡ Fun fact: I wrote a C interpreter for a custom DSL during university — now it's a side tool for automation.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- featured project / highlights (full-stack & desktop) -->
-        <div class="section-break">
-            <div class="section-title-main">
-                <i class="fas fa-rocket" style="color:#2563eb;"></i> 
-                <span>Featured Engineering Work</span>
-            </div>
-            <div class="project-highlight">
-                <div class="mini-project">
-                    <div><i class="fab fa-react" style="color:#3b82f6;"></i> <strong>DevPulse Dashboard</strong></div>
-                    <div style="font-size:0.75rem; margin-top: 6px;">React + Vite · Tailwind · FastAPI backend + PostgreSQL → realtime analytics</div>
-                    <div class="tech-pill" style="margin-top: 8px; background:#eef2ff; width: fit-content;"><i class="fas fa-star"></i> 187 stars</div>
-                </div>
-                <div class="mini-project">
-                    <div><i class="fas fa-database"></i> <strong>Multi-DB ORM Lite</strong></div>
-                    <div style="font-size:0.75rem; margin-top: 6px;">Python + SQLAlchemy & Node.js driver for MySQL/SQLite/Postgres with migration toolkit</div>
-                </div>
-                <div class="mini-project">
-                    <div><i class="fas fa-desktop"></i> <strong>SysMon C# Suite</strong></div>
-                    <div style="font-size:0.75rem; margin-top: 6px;">Windows performance monitor & resource manager (C# + .NET 8, low-level C interop)</div>
-                </div>
+        <!-- FOOTER: final touch, fullstack credo -->
+        <div class="fun-footer">
+            <div><i class="fas fa-crown"></i> Fullstack + Desktop: bridging modern web, robust backends & native power</div>
+            <div>
+                <i class="fab fa-github"></i> github.com/NangRotha &nbsp;|&nbsp;
+                <i class="fas fa-globe"></i> rotha.dev
             </div>
         </div>
-
-        <!-- GitHub + Additional info : fullstack journey & desktop synergy -->
-        <div class="github-metrics">
-            <div><i class="fab fa-github"></i> <strong>github.com/NangRotha</strong>  ·  active in fullstack tooling & desktop utilities</div>
-            <div><i class="fas fa-code-pull-request"></i> 93 PRs merged  ·  <i class="fas fa-users"></i> 8 collaborators</div>
-        </div>
-
-        <!-- EXTRA DETAILS: Current focus / collaboration  and profile design -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 0.5rem;">
-            <div style="background:#f6f9fe; border-radius: 1.4rem; padding: 1rem;">
-                <div style="font-weight: 700; display: flex; gap: 8px;"><i class="fas fa-terminal"></i> 🔭 Currently building</div>
-                <ul style="margin-left: 1.2rem; margin-top: 10px; font-size: 0.8rem; color: #1f2f48;">
-                    <li>Full‑stack SaaS starter: React+Vite + FastAPI + Postgres</li>
-                    <li>Cross‑platform desktop launcher (C# & React Native Windows)</li>
-                    <li>Open source CLI for SQLite/Postgres schema visualizer</li>
-                </ul>
-            </div>
-            <div style="background:#f6f9fe; border-radius: 1.4rem; padding: 1rem;">
-                <div style="font-weight: 700; display: flex; gap: 8px;"><i class="fas fa-handshake"></i> 👯 Looking to collaborate on</div>
-                <ul style="margin-left: 1.2rem; margin-top: 10px; font-size: 0.8rem; color: #1f2f48;">
-                    <li>Modern dev tooling (desktop + web integration)</li>
-                    <li>Open‑source database clients & admin panels</li>
-                    <li>C# & Node.js interop projects</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- skillset details in a row: extra badges for completeness -->
-        <hr>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px;">
-            <div><i class="fas fa-check-circle" style="color:#2c6e9e;"></i> <strong>Full‑stack toolchain:</strong> Vite · React Router · FastAPI · JWT · SQLAlchemy</div>
-            <div><i class="fas fa-check-circle" style="color:#2c6e9e;"></i> <strong>Desktop low‑level:</strong> C (pointers/memory) · C# (async/await) · Win32 API</div>
-        </div>
-
-        <!-- design / fun fact and footer -->
-        <div class="footer-note" style="margin-top: 1.2rem;">
-            <span><i class="fas fa-map-pin"></i> Phnom Penh / Global Remote</span>
-            <span><i class="fas fa-lightbulb"></i> ⚡ Fun fact: I built a custom C interpreter for embedded scripting</span>
-            <span><i class="fab fa-github-alt"></i> 1,800+ contributions last year</span>
-        </div>
-        
-        <!-- profile footer with reach links & quote -->
-        <div style="background: linear-gradient(95deg, #f0f4fa, transparent); border-radius: 1.2rem; padding: 0.8rem; margin-top: 1rem; display: flex; justify-content: space-between; flex-wrap: wrap;">
-            <span style="font-size: 0.7rem;"><i class="fas fa-envelope-open-text"></i> rotha.dev@fullstack.com   |   <i class="fab fa-discord"></i> rotha.codes</span>
-            <span style="font-size: 0.7rem; font-style: italic;">“Code meets design, desktop meets web — building without borders.”</span>
-        </div>
-
-        <!-- final footer -->
-        <div class="footer-note">
-            <span><i class="far fa-copyright"></i> Nang Rotha — Full‑Stack & Desktop Ecosystem</span>
-            <span><i class="fas fa-code-branch"></i> Available for freelance & innovative collabs</span>
+        <div style="text-align: center; font-size: 0.7rem; padding-top: 1rem; color:#5c6e8c;">
+            <i class="fas fa-code"></i>  HTML · CSS · Tailwind · React · Node · Python · FastAPI · Java · C# · C · MySQL · SQLite · PostgreSQL  —  always building.
         </div>
     </div>
 </div>
